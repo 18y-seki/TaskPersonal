@@ -2,6 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,10 +11,12 @@
 <link href="css/commons.css" rel="stylesheet">
 </head>
 <body>
+<form:form action="review" modelAttribute="selectForm" method="get">
 	<table>
 		<caption>検索結果</caption>
 		<thead>
 			<tr>
+			<th>記事ID</th>
 				<th>書名</th>
 				<th>著者名</th>
 				<th>記事投稿者</th>
@@ -23,7 +26,8 @@
 		<tbody>
 			<c:forEach var="review" items="${reviewList}">
 				<tr>
-					<td><a href="review">${fn:escapeXml(review.bookName)}</a></td>
+					<td><input type="submit" name="id" value="${fn:escapeXml(review.reviewId)}"></td>
+					<td>${fn:escapeXml(review.bookName)}</td>
 					<td>${fn:escapeXml(review.bookAuthor)}</td>
 					<td>${fn:escapeXml(review.reviewUser)}</td>
 					<td>${fn:escapeXml(review.reviewDate)}</td>
@@ -31,6 +35,7 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	</form:form>
 <a href="menu">メニューへ戻る</a>
 </body>
 </html>

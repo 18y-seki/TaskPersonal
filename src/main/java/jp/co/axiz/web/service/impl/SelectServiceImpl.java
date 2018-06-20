@@ -21,4 +21,14 @@ public class SelectServiceImpl implements SelectService{
 		return rd.find(form);
 
 	}
+
+	@Override
+	public Review findById(Integer id) {
+		return rd.findById(id);
+	}
+
+	@Override
+	public void delete(Integer id) {
+		rd.delete(id);
+	}
 }

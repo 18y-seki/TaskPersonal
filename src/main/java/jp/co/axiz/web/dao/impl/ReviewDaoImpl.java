@@ -9,6 +9,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import jp.co.axiz.web.dao.ReviewDao;
+import jp.co.axiz.web.entity.InsertForm;
 import jp.co.axiz.web.entity.Review;
 import jp.co.axiz.web.entity.SelectForm;
 
@@ -27,6 +28,13 @@ public class ReviewDaoImpl implements ReviewDao {
 	private static final String SQL_SELECT_AUTHOR_USER = "SELECT * FROM review WHERE book_author = ? AND review_user = ?";
 	private static final String SQL_SELECT_BOOK_AUTHOR_USER = "SELECT * FROM review WHERE book_name = ? AND book_author = ? AND review_user = ?";
 
+	private static final String SQL_SELECT_ID = "SELECT * FROM review WHERE review_id = ?";
+
+	private static final String SQL_INSERT = "INSERT INTO review (review_user, book_name, book_author, review_text) VALUES (?, ?, ?, ?);";
+
+	private static final String SQL_UPDATE = "UPDATE review SET book_name = ?, book_author = ?, review_text = ? WHERE review_id = ?";
+
+	private static final String SQL_DELETE = "DELETE FROM review WHERE review_id = ?";
 
 	@Override
 	public List<Review> findAll() {
@@ -132,9 +140,28 @@ public class ReviewDaoImpl implements ReviewDao {
 	}
 
 	@Override
-	public void post(SelectForm form) {
-		// TODO 自動生成されたメソッド・スタブ
+	public Review findById(Integer id) {
+		List<Review> list = jdbcTemplate.query(SQL_SELECT_ID,
+				new BeanPropertyRowMapper<Review>(Review.class),
+				id);
 
+		return list.get(0);
+	}
+
+	@Override
+	public void post(InsertForm form) {
+		jdbcTemplate.update(SQL_INSERT,
+				form.getReviewUser(),
+				form.getBookName(),
+				form.getBookAuthor(),
+				form.getReviewText());
+
+	}
+
+	@Override
+	public void delete(Integer id) {
+		jdbcTemplate.update(SQL_DELETE,
+				id);
 	}
 
 }

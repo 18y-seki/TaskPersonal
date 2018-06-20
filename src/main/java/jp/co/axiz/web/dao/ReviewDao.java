@@ -2,6 +2,7 @@ package jp.co.axiz.web.dao;
 
 import java.util.List;
 
+import jp.co.axiz.web.entity.InsertForm;
 import jp.co.axiz.web.entity.Review;
 import jp.co.axiz.web.entity.SelectForm;
 
@@ -18,6 +19,10 @@ public interface ReviewDao {
 	public List<Review> findByAuthorUser(String author, String user);
 	public List<Review> findByBookAuthorUser(String book, String author, String user);
 
+	public Review findById(Integer id);
 
-	public void post(SelectForm form);
+
+	public void post(InsertForm form);
+
+	public void delete(Integer id);
 }

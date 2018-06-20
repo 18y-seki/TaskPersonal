@@ -7,25 +7,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>登録画面</title>
+<title>削除画面</title>
 <link href="css/commons.css" rel="stylesheet">
 </head>
 <body>
+   <c:if test="${not empty msg}">
+    <p class="message"><span class="required"></span>${msg}</p>
+  </c:if>
+<p>本当に削除しますか？<br>
 
-    <p class="message">${msg}</p>
-<p>登録情報を入力してください<br>
-<span class="required"></span>は必須です</p>
-
-<form:form action="insert" modelAttribute="insertForm">
-  <fieldset class="label-110">
+<form:form action="delete" modelAttribute="selectForm">
+  <fieldset>
     <div>
-      <label class="required">書名</label><form:input path="bookName" />
+      書名：<input type="text" value="${fn:escapeXml(review.bookName)}" readonly>
     </div>
-    <div>
-      <label class="required">著者名</label><form:input path="bookAuthor" />
-    </div>
-    <div>
-      <label class="required">本文</label><form:textarea path="reviewText" />
+     <div>
+      投稿者名：<input type="text" value="${fn:escapeXml(review.reviewUser)}" readonly>
     </div>
   </fieldset>
   <form:button>確認</form:button>

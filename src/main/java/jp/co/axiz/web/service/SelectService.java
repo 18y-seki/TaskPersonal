@@ -7,4 +7,6 @@ import jp.co.axiz.web.entity.SelectForm;
 
 public interface SelectService {
 	public List<Review> find(SelectForm form);
+	public Review findById(Integer id);
+	public void delete(Integer id);
 }
