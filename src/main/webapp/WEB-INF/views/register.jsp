@@ -29,7 +29,7 @@
 	</form:form>
 
 <div>
-  <a href="index.jsp">TOP画面へ</a>
+  <a href="index">TOP画面へ</a>
 </div>
 </body>
 </html>
