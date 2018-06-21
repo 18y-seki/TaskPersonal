@@ -9,6 +9,7 @@
 <meta charset="UTF-8">
 <title>登録画面</title>
 <link href="css/commons.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
