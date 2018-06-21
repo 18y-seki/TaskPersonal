@@ -25,4 +25,6 @@ public interface ReviewDao {
 	public void post(InsertForm form);
 
 	public void delete(Integer id);
+
+	public void update(Review review);
 }

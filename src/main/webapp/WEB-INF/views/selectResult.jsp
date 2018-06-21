@@ -11,7 +11,7 @@
 <link href="css/commons.css" rel="stylesheet">
 </head>
 <body>
-<form:form action="review" modelAttribute="selectForm" method="get">
+<form:form action="review" modelAttribute="selectForm" >
 	<table>
 		<caption>検索結果</caption>
 		<thead>

@@ -41,6 +41,12 @@ public class SelectController {
 	}
 
 	@RequestMapping(value="/review", method =RequestMethod.GET)
+	public String review(@ModelAttribute("selectForm") SelectForm form, Model model) {
+
+		return "review";
+	}
+
+	@RequestMapping(value="/review", method =RequestMethod.POST)
 	public String review(@ModelAttribute("selectForm") SelectForm form, @RequestParam("id") Integer id, Model model, HttpSession session) {
 
 		Review review = ss.findById(id);

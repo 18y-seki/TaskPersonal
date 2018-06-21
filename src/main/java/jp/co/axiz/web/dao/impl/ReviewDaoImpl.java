@@ -164,4 +164,13 @@ public class ReviewDaoImpl implements ReviewDao {
 				id);
 	}
 
+	@Override
+	public void update(Review review) {
+		jdbcTemplate.update(SQL_UPDATE,
+				review.getBookName(),
+				review.getBookAuthor(),
+				review.getReviewText(),
+				review.getReviewId());
+	}
+
 }

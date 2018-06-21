@@ -36,9 +36,9 @@
       </td>
     </tr>
     </table>
-<%--
+
   <a href="update">編集</a>
---%>
+
   <a href="delete">削除</a>
 
 
