@@ -23,16 +23,10 @@
 <p>
 	<a href="insert">登録</a>
 </p>
-<%--
-<p>
-	<a href="update">更新</a>
-</p>
-<p>
-	<a href="delete">削除</a>
-</p>
-<form:form action="logout" modelAttribute = "form">
+
+<form:form action="logout" modelAttribute = "loginForm">
   <form:button>ログアウト</form:button>
 </form:form>
---%>
+
 </body>
 </html>

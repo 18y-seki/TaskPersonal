@@ -25,13 +25,11 @@ public class LoginController {
 
 	@RequestMapping(value = "/login", method=RequestMethod.POST)
 	public String login(@ModelAttribute("loginForm") LoginForm form, Model model, HttpSession session) {
-//		String id =form.getUserName();
-//		String pass =form.getPassword();
 
 		UserInfo u = ls.find(form);
 		if(u==null) {
 			model.addAttribute("msg", "IDまたはPASSが間違っています");
-		return "login";
+			return "login";
 		}
 
 		String login = u.getUserName();
@@ -51,7 +49,7 @@ public class LoginController {
 
 		if("".equals(name) ||name==null ||"".equals(pass) ||pass==null) {
 			model.addAttribute("msg", "IDまたはPASSが間違っています");
-		return "register";
+			return "register";
 		}
 
 		UserInfo u = ls.register(form);

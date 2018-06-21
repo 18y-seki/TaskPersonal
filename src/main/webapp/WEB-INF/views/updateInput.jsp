@@ -26,11 +26,11 @@
 					readonly="true" />
 			</div>
 			<div>
-				<label>名前</label>
+				<label>書名</label>
 				<form:input path="bookName"  />
 			</div>
 			<div>
-				<label>著者</label>
+				<label>著者名</label>
 				<form:input path="bookAuthor" />
 			</div>
 			<div>

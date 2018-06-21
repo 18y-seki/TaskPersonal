@@ -36,18 +36,16 @@
     </div>
   </fieldset>
 
-
-
   <fieldset class="col label-110">
     <legend>変更後</legend>
     <div>
-      <label>名前</label><form:input path="bookName"  readonly="true"/>
+      <label>書名</label><form:input path="bookName"  readonly="true"/>
     </div>
     <div>
-      <label>TEL</label><form:input path="bookAuthor"  readonly="true"/>
+      <label>著者名</label><form:input path="bookAuthor"  readonly="true"/>
     </div>
     <div>
-      <label>PASS(再入力)</label><form:textarea path="reviewText" readonly="true"/>
+      <label>本文</label><form:textarea path="reviewText" readonly="true"/>
     </div>
   </fieldset>
 

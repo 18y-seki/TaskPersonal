@@ -31,8 +31,6 @@ public class UpdateController {
 
 	@RequestMapping(value="/updateInput", method =RequestMethod.POST)
 	public String updateInput(@ModelAttribute("updateForm") Review review, Model model, HttpSession session) {
-		session.setAttribute("newReview", review);
-
 
 		return "updateConfirm";
 	}
@@ -41,6 +39,7 @@ public class UpdateController {
 	public String updateConfirm(@ModelAttribute("updateForm") Review review, Model model, HttpSession session) {
 
 		us.update(review);
+		session.removeAttribute("review");
 		return "updateResult";
 	}
 }
