@@ -34,6 +34,11 @@ input:read-only {
   color: black;
 }
 
+textarea{
+	width: 110px;
+	height: 200px;
+}
+
 textarea:read-only {
   background: #CCCCCC;
   color: black;

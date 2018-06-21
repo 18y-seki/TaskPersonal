@@ -9,10 +9,16 @@
 <meta charset="UTF-8">
 <title>検索結果画面</title>
 <link href="css/commons.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
+<header></header>
+
+
 <form:form action="review" modelAttribute="selectForm" >
-	<table>
+	<div class="container">
+  	<table class="table">
 		<caption>検索結果</caption>
 		<thead>
 			<tr>
@@ -35,6 +41,7 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	</div>
 	</form:form>
 <a href="menu">メニューへ戻る</a>
 </body>
