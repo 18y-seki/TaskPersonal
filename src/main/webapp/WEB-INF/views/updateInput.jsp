@@ -19,7 +19,7 @@
 		１箇所以上の項目を変更してください<br> ※IDは変更できません
 	</p>
 	<form:form action="updateInput" modelAttribute="updateForm">
-		<fieldset>
+		<fieldset class="col label-110">
 			<div>
 				<label>ID</label>
 				<form:input path="reviewId"

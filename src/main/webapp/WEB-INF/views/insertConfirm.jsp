@@ -19,20 +19,20 @@
 <form:form action="insertConfirm" modelAttribute="insertForm" method="post">
   <fieldset class="label-110">
     <div>
-      <label>名前</label><form:input path="bookName" value="${fn:escapeXml(form.bookName)}" readonly="true"/>
+      <label>書名</label><form:input path="bookName" value="${fn:escapeXml(form.bookName)}" readonly="true"/>
 
     </div>
     <div>
-      <label>TEL</label><form:input path="bookAuthor" value="${fn:escapeXml(form.bookAuthor)}" readonly="true"/>
+      <label>著者名</label><form:input path="bookAuthor" value="${fn:escapeXml(form.bookAuthor)}" readonly="true"/>
 
     </div>
     <div>
-      <label>PASS（再入力）</label><form:textarea path="reviewText" value="${fn:escapeXml(form.reviewText)}" readonly="true"/>
+      <label>本文</label><form:textarea path="reviewText" value="${fn:escapeXml(form.reviewText)}" readonly="true"/>
 
     </div>
   </fieldset>
   <div>
-    <form:button>登録</form:button>
+    <form:button>投稿</form:button>
     <form:button onclick="location.href='insert'; return false;">戻る</form:button>
   </div>
 </form:form>

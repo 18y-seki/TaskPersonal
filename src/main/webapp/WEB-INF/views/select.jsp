@@ -18,7 +18,7 @@
 ※全て空白の場合は全検索を行います</p>
 
 <form:form action="list" modelAttribute="selectForm" method="get">
-  <fieldset>
+  <fieldset class="col label-80">
     <div>
       <label>書名</label><form:input path="bookName" />
     </div>
@@ -26,7 +26,7 @@
       <label>著者</label><form:input path="bookAuthor" />
     </div>
     <div>
-      <label>投稿</label><form:input path="reviewUser" />
+     <label> 投稿者</label><form:input path="reviewUser" />
     </div>
   </fieldset>
   <form:button>検索</form:button>

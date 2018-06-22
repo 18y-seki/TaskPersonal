@@ -6,13 +6,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>検索結果画面</title>
+<title>レビュー画面</title>
 <link href="css/commons.css" rel="stylesheet">
 </head>
 <body>
 <p>記事を表示します</p>
 
-<table>
+<table class="view">
   <caption>レビュー記事</caption>
 <thead>
     <tr>

@@ -21,7 +21,7 @@
 </p>
 
 <p>
-	<a href="insert">登録</a>
+	<a href="insert">投稿</a>
 </p>
 
 <form:form action="logout" modelAttribute = "loginForm">

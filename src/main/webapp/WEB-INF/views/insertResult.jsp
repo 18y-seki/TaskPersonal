@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>登録結果確認画面</title>
+<title>投稿結果確認画面</title>
 <link href="css/commons.css" rel="stylesheet">
 </head>
 <body>

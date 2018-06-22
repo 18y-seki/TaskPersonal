@@ -13,6 +13,10 @@ fieldset.label-60 label {
   width: 60px;
 }
 
+fieldset.label-80 label {
+  width: 80px;
+}
+
 fieldset.label-110 label {
   width: 110px;
 }
@@ -50,6 +54,11 @@ textarea:read-only {
 
 .message{
 	color: red;
+}
+
+.view{
+	width: 600px;
+	border: solid 1px;
 }
 
 .required::before {

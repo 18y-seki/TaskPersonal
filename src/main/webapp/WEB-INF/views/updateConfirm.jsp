@@ -30,11 +30,6 @@
 <p>これでよろしいですか？</p>
 
 <form:form action="updateResult" modelAttribute ="updateForm">
-  <fieldset>
-    <div>
-      <label>ID</label><form:input path="reviewId" readonly="true"/>
-    </div>
-  </fieldset>
 
   <fieldset class="col label-110">
     <legend>変更後</legend>

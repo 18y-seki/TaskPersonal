@@ -7,14 +7,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>登録画面</title>
+<title>投稿画面</title>
 <link href="css/commons.css" rel="stylesheet">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
     <p class="message">${msg}</p>
-<p>登録情報を入力してください<br>
+<p>記事内容を入力してください<br>
 <span class="required"></span>は必須です</p>
 
 <form:form action="insert" modelAttribute="insertForm">
